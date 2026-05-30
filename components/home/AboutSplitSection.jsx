@@ -9,7 +9,7 @@ export default function AboutSplitSection() {
         <Reveal className="about-media-wrap">
           <Image
             src="/images/about.jpg"
-            alt="Students and parents receiving counseling"
+            alt="Students and families receiving expert counseling at Pokhara Future Minds"
             width={900}
             height={1040}
             className="about-photo"
@@ -24,25 +24,29 @@ export default function AboutSplitSection() {
               <span>About Us</span>
             </p>
             <h2 id="home-about-heading">
-              An expert advisory for great
-              <span> Value For Visa</span>
+              Expert Guidance for an
+              <span> Error-Free Visa</span>
             </h2>
             <p className="about-copy">
-              Pokhara Future Minds Educational Consultancy guides students with practical,
-              transparent planning across admissions, documentation, and destination strategy.
+              With visa rules getting stricter, small mistakes cost big. We double-check
+              every detail — from your bank sources to mock interview preparation — so you
+              apply with 100% confidence and a clear PR pathway ahead.
             </p>
 
             <div className="about-highlight-row">
               <Image
                 src="/images/about-thumb.jpg"
-                alt="Visa file review"
+                alt="Visa file review at Pokhara Future Minds"
                 width={160}
                 height={110}
                 className="about-thumb"
                 loading="lazy"
               />
-              <p>We have been counseling students for education in foreign countries.</p>
-              <Link href="/about" aria-label="Read more about us" className="about-mini-cta">
+              <p>
+                We combine strategic profile mapping with ethical guidance — moving students
+                from confusion to a confident visa grant.
+              </p>
+              <Link href="/about" aria-label="Read more about Pokhara Future Minds" className="about-mini-cta">
                 →
               </Link>
             </div>
@@ -50,11 +54,11 @@ export default function AboutSplitSection() {
             <div className="mini-card-grid">
               <article className="mini-card">
                 <h3>Our Mission</h3>
-                <p>Deliver reliable and effective guidance that improves admission outcomes.</p>
+                <p>Expert, error-free mentorship ensuring your high-success study abroad journey.</p>
               </article>
               <article className="mini-card">
                 <h3>Our Vision</h3>
-                <p>Empower students to build globally relevant and sustainable careers.</p>
+                <p>Building global leaders through high-success visa pathways and sustainable careers.</p>
               </article>
             </div>
 
@@ -63,7 +67,7 @@ export default function AboutSplitSection() {
                 More About Us
               </Link>
               <Link href="/contact" className="btn-pill-gray">
-                Speak to Advisor
+                Speak to an Advisor
               </Link>
             </div>
           </article>

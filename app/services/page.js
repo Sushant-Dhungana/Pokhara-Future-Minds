@@ -2,62 +2,84 @@ import Link from "next/link";
 import PageHero from "../../components/common/PageHero";
 import Reveal from "../../components/motion/Reveal";
 import { services } from "../../data/services";
-import { buildMetadata } from "../../lib/seo";
+import { buildMetadata, siteConfig } from "../../lib/seo";
 
 const commonInclusions = [
-  "Dedicated counselor assigned per student profile.",
-  "Application timeline planning with milestone reminders.",
-  "Document quality checks before each submission.",
-  "Strategic decision support for offers and final selection.",
+  "Dedicated counselor assigned to your profile from day one.",
+  "Application timeline planning with milestone reminders and deadline tracking.",
+  "Document quality checks and consistency review before each submission.",
+  "Strategic decision support for offer comparisons and final university selection.",
 ];
 
 const supportTracks = [
   {
+    title: "Language & Exam Track",
+    detail:
+      "For students who need Korean language (TOPIK), IELTS, or PTE preparation before applying to universities. Structured classes with mock tests and score targeting.",
+  },
+  {
     title: "Foundation Track",
     detail:
-      "For students starting from destination confusion and needing full profile-direction clarity.",
+      "For students starting from scratch — destination confusion, profile gaps, or no clear intake target. We map your goals and build a realistic roadmap.",
   },
   {
     title: "Application Track",
     detail:
-      "For students who already selected destination and need high-quality admission execution.",
+      "For students who have chosen their destination and need high-quality admission execution — university applications, SOP writing, and offer management.",
   },
   {
     title: "Visa Track",
     detail:
-      "For students with offers who need structured visa file preparation and interview readiness.",
+      "For students with offers who need structured visa file preparation, GS compliance review, and intensive embassy mock interview coaching.",
   },
 ];
 
 export function generateMetadata() {
   return buildMetadata({
-    title: "Services",
+    title:
+      "Korean Language, IELTS, PTE Classes & Visa Services | Pokhara Future Minds",
     description:
-      "Explore counseling, admission, documentation, and visa support services at Pokhara Future Minds Educational Consultancy.",
+      "Korean language (TOPIK) classes, IELTS & PTE coaching, university admissions, SOP writing, scholarship guidance, and student visa support — all under one roof in Pokhara.",
     path: "/services",
   });
 }
 
+const servicesBreadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: siteConfig.url },
+    { "@type": "ListItem", position: 2, name: "Services", item: `${siteConfig.url}/services` },
+  ],
+};
+
 export default function ServicesPage() {
   return (
     <>
-      <PageHero
-        kicker="Services"
-        title="End-to-End Student"
-        accent="Services"
-        description="Our advisory model covers each stage of studying abroad with practical, action-focused support."
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesBreadcrumb) }}
       />
 
-      <section className="section">
+      <PageHero
+        kicker="Our Services"
+        title="A Results-Focused Roadmap for Your"
+        accent="Study Abroad Journey"
+        description="From Korean language classes and IELTS/PTE coaching to complete visa guidance — our structured service modules are designed to deliver real, measurable outcomes."
+      />
+
+      <section className="section" aria-labelledby="services-modules-heading">
         <div className="container">
           <Reveal>
             <div className="section-head">
-              <h2 className="brand-heading-md">
-                Service modules built for <span>real outcomes</span>
+              <h2 id="services-modules-heading" className="brand-heading-md">
+                Strategic success pillars for <span>student visa approvals</span>
               </h2>
               <p>
-                Each module is designed to solve a specific problem in your study-abroad
-                journey, from early planning and profile direction to final visa execution.
+                Rather than offering generic advice, we focus on structured modules
+                designed to improve student visa success rates. Your academic background,
+                career goals, and study plan are aligned with global education opportunities
+                and high-demand career pathways.
               </p>
             </div>
           </Reveal>
@@ -79,7 +101,7 @@ export default function ServicesPage() {
                       <li key={item}>{item}</li>
                     ))}
                   </ul>
-                  <Link href="/contact">Get Support</Link>
+                  <Link href="/contact">Get Started</Link>
                 </article>
               </Reveal>
             ))}
@@ -87,11 +109,11 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="section section--muted">
+      <section className="section section--muted" aria-labelledby="service-tracks-heading">
         <div className="container detail-grid-wrap">
           <Reveal>
             <article className="surface-card">
-              <h2 className="brand-heading-sm">
+              <h2 id="service-tracks-heading" className="brand-heading-sm">
                 What every student gets <span>by default</span>
               </h2>
               <ul className="check-list compact-check">
@@ -116,7 +138,7 @@ export default function ServicesPage() {
                 ))}
               </div>
               <Link href="/contact" className="btn-pill-gradient">
-                Book Service Consultation
+                Book a Free Consultation
               </Link>
             </article>
           </Reveal>

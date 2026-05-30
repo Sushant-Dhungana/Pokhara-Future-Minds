@@ -7,17 +7,17 @@ export default function CtaSection() {
       <div className="container">
         <Reveal>
           <article className="cta-card">
-            <p className="section-kicker">Ready to Start?</p>
+            <p className="section-kicker">Ready to Start Your Journey?</p>
             <h2 id="cta-heading">
               Book Your Free Counseling <span>Session Today</span>
             </h2>
             <p>
-              Get a clear study plan with destination options, timeline, and personalized
-              application guidance.
+              Get a clear study plan covering destination options, Korean language or IELTS/PTE
+              preparation, and a personalized visa strategy — all in one session.
             </p>
             <div className="hero-actions">
               <Link href="/contact" className="btn-pill-gradient">
-                Book Consultation
+                Book Free Consultation
               </Link>
               <Link href="/destinations" className="btn-pill-gray">
                 Explore Destinations

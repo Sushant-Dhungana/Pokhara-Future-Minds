@@ -5,20 +5,27 @@ const quickLinks = [
   { href: "/about", label: "About Us" },
   { href: "/services", label: "Services" },
   { href: "/destinations", label: "Destinations" },
-  { href: "/blogs", label: "Blogs" },
+  { href: "/blogs", label: "Blog & Guides" },
   { href: "/contact", label: "Contact" },
 ];
 
 const destinationLinks = [
+  { href: "/destinations/korea", label: "South Korea ⭐" },
+  { href: "/destinations/japan", label: "Japan" },
   { href: "/destinations/australia", label: "Australia" },
   { href: "/destinations/canada", label: "Canada" },
-  { href: "/destinations/uk", label: "UK" },
-  { href: "/destinations/usa", label: "USA" },
-  { href: "/destinations/korea", label: "Korea" },
-  { href: "/destinations/japan", label: "Japan" },
+  { href: "/destinations/uk", label: "United Kingdom" },
+  { href: "/destinations/usa", label: "United States" },
 ];
 
-const guidanceTags = ["Admissions", "Visa Guidance", "Scholarships"];
+const guidanceTags = [
+  "Korean Language",
+  "IELTS Coaching",
+  "PTE Coaching",
+  "Visa Guidance",
+  "Admissions",
+  "Scholarships",
+];
 
 export default function Footer() {
   return (
@@ -32,11 +39,11 @@ export default function Footer() {
             <Link
               href="/"
               className="footer-brand-link"
-              aria-label="Go to homepage"
+              aria-label="Pokhara Future Minds — Go to homepage"
             >
               <Image
                 src="/logo.png"
-                alt="Pokhara Future Minds"
+                alt="Pokhara Future Minds Educational Consultancy"
                 width={260}
                 height={84}
                 className="footer-brand-logo"
@@ -48,9 +55,9 @@ export default function Footer() {
             </h3>
 
             <p className="footer-brand-copy">
-              Strategic educational counseling for destination planning,
-              admission execution, visa preparation, and successful student
-              transitions.
+              Pokhara&apos;s trusted study abroad consultancy — offering Korean language
+              (TOPIK) classes, IELTS &amp; PTE coaching, GKS scholarship guidance, and
+              expert student visa support for Korea, Australia, Canada, UK, and more.
             </p>
 
             <div className="footer-color-rails" aria-hidden="true">
@@ -60,7 +67,7 @@ export default function Footer() {
               <span className="rail-green" />
             </div>
 
-            <div className="footer-chip-row" aria-label="Core support areas">
+            <div className="footer-chip-row" aria-label="Core services offered">
               {guidanceTags.map((tag) => (
                 <span key={tag} className="footer-chip">
                   {tag}
@@ -70,16 +77,16 @@ export default function Footer() {
 
             <div className="footer-metrics">
               <article className="footer-metric">
-                <strong>100+</strong>
+                <strong>1,000+</strong>
                 <span>Students Guided</span>
               </article>
               <article className="footer-metric">
-                <strong>6</strong>
-                <span>Top Destinations</span>
+                <strong>700+</strong>
+                <span>Offers Secured</span>
               </article>
               <article className="footer-metric">
-                <strong>1:1</strong>
-                <span>Mentored Support</span>
+                <strong>8+</strong>
+                <span>Years of Expertise</span>
               </article>
             </div>
 
@@ -87,8 +94,8 @@ export default function Footer() {
               <Link href="/contact" className="btn-pill-gradient">
                 Book Free Counselling
               </Link>
-              <Link href="/destinations" className="btn-pill-gray">
-                Explore Destinations
+              <Link href="/destinations/korea" className="btn-pill-gray">
+                Explore Korea
               </Link>
             </div>
           </article>
@@ -106,7 +113,7 @@ export default function Footer() {
             </div>
 
             <div className="footer-link-card">
-              <h4>Top Destinations</h4>
+              <h4>Study Destinations</h4>
               <ul className="footer-link-list">
                 {destinationLinks.map((link) => (
                   <li key={link.href}>
@@ -119,21 +126,22 @@ export default function Footer() {
             <div className="footer-link-card footer-contact-card">
               <h4>Contact Desk</h4>
               <div className="footer-contact-list">
-                <p>Pokhara, Nepal</p>
-                <a href="tel:+9779800000000">+977-9800000000</a>
-                <a href="mailto:info@pokharafutureminds.com">
-                  info@pokharafutureminds.com
+                <p>New Road, Ward No. 8, Pokhara, Nepal</p>
+                <a href="tel:+97761585653">061-585653</a>
+                <a href="tel:+9779705488335">+977-9705488335</a>
+                <a href="mailto:pkrfutureminds@gmail.com">
+                  pkrfutureminds@gmail.com
                 </a>
               </div>
               <p className="footer-contact-note">
-                Office Hours: Sunday - Friday, 10:00 AM to 6:00 PM
+                Office Hours: Sunday – Friday, 10:00 AM – 6:00 PM
               </p>
               <div className="footer-contact-actions">
                 <Link href="/contact" className="btn-pill-gradient">
                   Contact Team
                 </Link>
                 <Link href="/services" className="footer-inline-link">
-                  View Full Services
+                  View All Services
                 </Link>
               </div>
             </div>
@@ -143,16 +151,20 @@ export default function Footer() {
         <div className="footer-bottom">
           <div className="footer-bottom-inner">
             <p>
-              © {new Date().getFullYear()} Pokhara Future Minds. All rights
-              reserved.
+              © {new Date().getFullYear()} Pokhara Future Minds Educational Consultancy.
+              All rights reserved.
             </p>
             <div className="footer-bottom-links">
-              <Link href="/blogs">Latest Blogs</Link>
+              <Link href="/blogs">Korea Study Guide</Link>
               <span>•</span>
-              <Link href="/destinations">Destinations</Link>
-              <span></span>
+              <Link href="/destinations/korea">Korea Programs</Link>
+              <span>•</span>
+              <Link href="/contact">Free Counselling</Link>
             </div>
           </div>
+          <p className="footer-credit">
+            Designed &amp; Developed by <strong>Sushant Dhungana</strong>
+          </p>
         </div>
       </div>
     </footer>

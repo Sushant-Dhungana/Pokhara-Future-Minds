@@ -8,9 +8,15 @@ export default function ProcessSteps() {
       <div className="container">
         <Reveal>
           <div className="process-head">
+            <p className="section-kicker">How It Works</p>
             <h2 id="process-heading">
-              Your visa sorted in just 4 super simple <span>Steps</span>
+              Our Proven 4-Stage Pathway to <span>Visa Success</span>
             </h2>
+            <p>
+              Navigating strict embassy requirements with precision documentation
+              and proven interview strategies — from profile mapping to your first
+              day abroad.
+            </p>
           </div>
         </Reveal>
 

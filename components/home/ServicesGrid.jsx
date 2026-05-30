@@ -8,13 +8,13 @@ export default function ServicesGrid() {
       <div className="container">
         <Reveal>
           <div className="section-head">
-            <p className="section-kicker">Our Core Services</p>
+            <p className="section-kicker">What We Offer</p>
             <h2 id="home-services-heading">
-              Comprehensive Student <span>Support</span>
+              All-in-One Admission, Visa &amp; <span>Language Support</span>
             </h2>
             <p>
-              From profile analysis to final visa preparation, we support every milestone
-              with a structured, practical process.
+              From Korean language classes and IELTS/PTE coaching to complete visa guidance —
+              we provide 360° support for every stage of your study abroad journey.
             </p>
           </div>
         </Reveal>

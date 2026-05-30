@@ -1,29 +1,30 @@
 export const processSteps = [
   {
     id: 1,
-    title: "Complete Online Form",
+    title: "Strategic Career Mapping",
     description:
-      "Collaborate with team and partners. Get your work over the finish line.",
+      "Work with our senior mentors to audit your academic profile, define your career goals, and build a high-success visa pathway aligned to your target intake.",
     image: "/images/process/step1.jpg",
   },
   {
     id: 2,
-    title: "Documents & Payments",
+    title: "Documentation & Enrollment",
     description:
-      "Any nonimmigrant visa applicant can pay their visa application.",
+      "Secure your Offer Letter or CoE/CAS with expert guidance on tuition deposits, scholarships, financial documents, and institution enrollment.",
     image: "/images/process/step2.jpg",
   },
   {
     id: 3,
-    title: "Direct Interview",
+    title: "Interview & Biometric Prep",
     description:
-      "Questions are specific questions that directly relate to the positions.",
+      "Ace your embassy mock interview with trend-based practice sessions, confidence coaching, and a final document review before submission.",
     image: "/images/process/step3.jpg",
   },
   {
     id: 4,
-    title: "Receive Visa",
-    description: "Compare visas to visit, work, study or join a family member already.",
+    title: "Visa Success & Pre-Departure",
+    description:
+      "Get your visa approved and prepared for departure. Our pre-departure briefing covers accommodation, work rights, and your long-term PR pathway abroad.",
     image: "/images/process/step4.jpg",
   },
 ];

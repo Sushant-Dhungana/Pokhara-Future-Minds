@@ -3,27 +3,41 @@ import Link from "next/link";
 import PageHero from "../../components/common/PageHero";
 import Reveal from "../../components/motion/Reveal";
 import { blogs } from "../../data/blogs";
-import { buildMetadata } from "../../lib/seo";
+import { buildMetadata, siteConfig } from "../../lib/seo";
 
 export function generateMetadata() {
   return buildMetadata({
-    title: "Blogs",
+    title: "Korea Study Guide, IELTS Tips & GKS Scholarship Blog | Pokhara Future Minds",
     description:
-      "Read practical blog articles on destinations, visa documentation, and admission planning.",
+      "Practical guides for Nepali students — how to study in Korea, GKS scholarship application, IELTS vs PTE comparison, visa documentation tips, and more.",
     path: "/blogs",
   });
 }
+
+const blogsBreadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: siteConfig.url },
+    { "@type": "ListItem", position: 2, name: "Blog & Guides", item: `${siteConfig.url}/blogs` },
+  ],
+};
 
 export default function BlogsPage() {
   const [featured, ...rest] = blogs;
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogsBreadcrumb) }}
+      />
+
       <PageHero
-        kicker="Blogs"
-        title="Latest Student Guidance"
-        accent="Articles"
-        description="Practical reads designed to help students and families make better study-abroad decisions."
+        kicker="Blog & Study Guides"
+        title="Practical Guides for"
+        accent="Nepali Students Abroad"
+        description="In-depth articles on studying in Korea, GKS scholarships, IELTS and PTE preparation, and student visa documentation — written by our counselors."
       />
 
       <section className="section">
@@ -41,14 +55,14 @@ export default function BlogsPage() {
               />
               <div className="featured-blog-content">
                 <p className="blog-date">
-                  {featured.date} • {featured.category} • {featured.readTime}
+                  {featured.date} &bull; {featured.category} &bull; {featured.readTime}
                 </p>
                 <h2 className="brand-heading-sm">
-                  {featured.title} <span>Guide</span>
+                  {featured.title}
                 </h2>
                 <p>{featured.excerpt}</p>
                 <Link href={`/blogs/${featured.slug}`} className="btn-pill-gradient">
-                  Read Featured Article
+                  Read Full Guide
                 </Link>
               </div>
             </article>
@@ -56,13 +70,18 @@ export default function BlogsPage() {
         </div>
       </section>
 
-      <section className="section section--muted">
+      <section className="section section--muted" aria-labelledby="more-blogs-heading">
         <div className="container">
           <Reveal>
             <div className="section-head">
-              <h2 className="brand-heading-md">
-                More practical insights for <span>students</span>
+              <h2 id="more-blogs-heading" className="brand-heading-md">
+                More guides for <span>students & families</span>
               </h2>
+              <p>
+                Bookmark these articles — they cover the most common questions
+                we hear from students in Pokhara about Korea, IELTS, PTE, and
+                the study abroad process.
+              </p>
             </div>
           </Reveal>
 
@@ -80,9 +99,9 @@ export default function BlogsPage() {
                   />
                   <div className="blog-card-body">
                     <p className="blog-date">
-                      {blog.date} • {blog.category} • {blog.readTime}
+                      {blog.date} &bull; {blog.category} &bull; {blog.readTime}
                     </p>
-                    <h2 className="brand-heading-xs">{blog.title}</h2>
+                    <h3 className="brand-heading-xs">{blog.title}</h3>
                     <p>{blog.excerpt}</p>
                     <Link href={`/blogs/${blog.slug}`} className="btn-pill-gray">
                       Read Article

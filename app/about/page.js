@@ -2,71 +2,85 @@ import Image from "next/image";
 import Link from "next/link";
 import PageHero from "../../components/common/PageHero";
 import Reveal from "../../components/motion/Reveal";
-import { buildMetadata } from "../../lib/seo";
+import { buildMetadata, siteConfig } from "../../lib/seo";
 
 const trustPoints = [
   {
     title: "Transparent Counseling",
-    text: "We explain each step, requirement, and risk clearly so families can make confident decisions.",
+    text: "We clarify the latest 2026 visa rules, financial requirements, and real risks — so students and families make confident, fully informed decisions from day one.",
   },
   {
     title: "Outcome-Focused Planning",
-    text: "Every recommendation is linked to employability, affordability, and long-term academic progression.",
+    text: "Every recommendation we make is linked to high-demand career paths, destination affordability, and long-term PR or work visa opportunities.",
   },
   {
     title: "Detail-Driven Documentation",
-    text: "Our team reviews documents for consistency, structure, and submission readiness before deadlines.",
+    text: "Our team reviews every document for consistency, structure, and submission readiness — before deadlines, not after problems arise.",
   },
   {
-    title: "Continuous Student Support",
-    text: "From first counseling call to pre-departure briefing, students receive active guidance at each stage.",
+    title: "Active Student Mentorship",
+    text: "From your first call to intensive mock interview preparation, students receive personal, one-on-one guidance to handle strict 2026 embassy scrutiny.",
   },
 ];
 
 const workflow = [
   {
     step: "01",
-    title: "Discovery Session",
+    title: "Global Success Mapping",
     detail:
-      "Profile, budget, and career intent are mapped to identify realistic destination pathways.",
+      "We conduct a deep profile audit to align your academic background, budget, and career goals with high-success 2026 visa pathways and regional PR opportunities.",
   },
   {
     step: "02",
-    title: "Application Strategy",
+    title: "Strategic Application Design",
     detail:
-      "University list, SOP structure, and document plan are prepared with timeline checkpoints.",
+      "Our experts build a tailored university list and SOP framework that highlights your academic intent — for the best admission outcomes at your target institutions.",
   },
   {
     step: "03",
-    title: "Visa Readiness",
+    title: "High-Success Visa Compliance",
     detail:
-      "Financial and academic files are checked, then interview responses are refined through mock practice.",
+      "We audit your financial files for Genuine Student (GS) compliance and refine your confidence through intensive embassy mock interviews based on the latest trends.",
   },
   {
     step: "04",
-    title: "Departure Support",
+    title: "Post-Visa Arrival Mentorship",
     detail:
-      "Final orientation includes accommodation, travel checklist, and first-month settlement guidance.",
+      "Beyond the visa grant, we provide pre-departure briefings covering accommodation, part-time work rights, and initial settlement guidance in your new city.",
   },
 ];
 
 export function generateMetadata() {
   return buildMetadata({
-    title: "About",
+    title: "About Pokhara Future Minds | Expert Study Abroad Consultancy Since 2016",
     description:
-      "Learn about Pokhara Future Minds Educational Consultancy, our counseling framework, and student-first values.",
+      "Learn about Pokhara Future Minds — our student-first counseling approach, 1,000+ students guided, and expert visa guidance for Korea, Australia, Canada, UK, USA & Japan.",
     path: "/about",
   });
 }
 
+const aboutBreadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: siteConfig.url },
+    { "@type": "ListItem", position: 2, name: "About Us", item: `${siteConfig.url}/about` },
+  ],
+};
+
 export default function AboutPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutBreadcrumb) }}
+      />
+
       <PageHero
-        kicker="About"
-        title="About Pokhara Future Minds"
-        accent="Consultancy"
-        description="We combine practical counseling with transparent guidance so students can move from uncertainty to confident action."
+        kicker="About Us"
+        title="Why Students Trust"
+        accent="Future Minds Pokhara"
+        description="We combine strategic profile mapping with ethical guidance — helping students move from confusion to a confident visa grant and a global career."
       />
 
       <section className="section">
@@ -74,7 +88,7 @@ export default function AboutPage() {
           <Reveal>
             <Image
               src="/images/about.jpg"
-              alt="Consultancy discussion session"
+              alt="Expert counseling session at Pokhara Future Minds Educational Consultancy"
               width={920}
               height={760}
               className="about-page-image"
@@ -85,49 +99,50 @@ export default function AboutPage() {
           <Reveal delay={0.06}>
             <article className="surface-card">
               <h2 className="brand-heading-sm">
-                Student-first advisory with <span>clear outcomes</span>
+                Expert visas and <span>proven PR pathways</span>
               </h2>
               <p>
-                Pokhara Future Minds Educational Consultancy was built to solve one
-                common challenge: students receive too much generic advice and too
-                little practical direction. Our process is designed to convert plans
-                into measurable progress.
+                Getting an offer letter is the easy part. Securing a student visa in 2026
+                requires a high-intent strategy — and that&apos;s what we specialize in.
+                We&apos;ve guided over 1,000 students through admissions, documentation,
+                and visa processes for Korea, Australia, Canada, UK, USA, and Japan.
               </p>
               <p>
-                We support destination selection, university applications, visa file
-                preparation, and pre-departure transition with realistic timelines and
-                clear accountability at each milestone.
+                Our focus is not just on your departure. We align your profile with
+                skill-shortage career fields and PR-ready programs — so your study
+                abroad journey leads somewhere, not just anywhere.
               </p>
 
               <div className="mini-card-grid">
                 <article className="mini-card">
                   <h3>Our Mission</h3>
-                  <p>Deliver reliable guidance and high-quality support at every stage.</p>
+                  <p>Expert, error-free mentorship ensuring your high-success study abroad journey.</p>
                 </article>
                 <article className="mini-card">
                   <h3>Our Vision</h3>
-                  <p>Enable students to access global education and build lasting careers.</p>
+                  <p>Building global leaders through high-success visa pathways and sustainable careers.</p>
                 </article>
               </div>
 
               <Link href="/contact" className="btn-pill-gradient">
-                Talk to an Advisor
+                Book Free Counseling
               </Link>
             </article>
           </Reveal>
         </div>
       </section>
 
-      <section className="section section--muted">
+      <section className="section section--muted" aria-labelledby="trust-heading">
         <div className="container">
           <Reveal>
             <div className="section-head">
-              <h2 className="brand-heading-md">
+              <h2 id="trust-heading" className="brand-heading-md">
                 Why students and families <span>trust us</span>
               </h2>
               <p>
-                Our counseling model balances ambition with feasibility, ensuring students
-                choose destinations and programs aligned with both career intent and budget.
+                We prioritize your Return on Investment (ROI) by aligning top-tier
+                career goals with affordable, high-success study pathways that
+                deliver real long-term global outcomes.
               </p>
             </div>
           </Reveal>
@@ -145,16 +160,16 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section" aria-labelledby="roadmap-heading">
         <div className="container">
           <Reveal>
             <div className="section-head">
-              <h2 className="brand-heading-md">
-                Our advisory model in <span>four stages</span>
+              <h2 id="roadmap-heading" className="brand-heading-md">
+                Our 4-stage roadmap to <span>visa success</span>
               </h2>
               <p>
-                A structured process ensures students always know what happens next,
-                what documents are needed, and how each decision affects future options.
+                Navigating strict 2026 Genuine Student (GS) and PAL requirements
+                with precision documentation and proven interview strategies.
               </p>
             </div>
           </Reveal>

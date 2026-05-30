@@ -16,7 +16,10 @@ export default function FaqSection() {
             <h2 id="faq-heading">
               Frequently Asked <span>Questions</span>
             </h2>
-            <p>Quick answers to common questions from students and parents.</p>
+            <p>
+              Quick answers about Korean language classes, IELTS/PTE coaching, visa guidance,
+              and study abroad from students and families in Pokhara.
+            </p>
           </div>
         </Reveal>
 
