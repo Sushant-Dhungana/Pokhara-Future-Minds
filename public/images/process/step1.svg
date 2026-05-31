@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1f40"/>
+      <stop offset="100%" stop-color="#1a3568"/>
+    </linearGradient>
+    <linearGradient id="acc1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4f46e5"/>
+      <stop offset="100%" stop-color="#d13a8a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Full square background — CSS clips to circle -->
+  <rect width="300" height="300" fill="url(#bg1)"/>
+
+  <!-- Subtle radial glow from center -->
+  <radialGradient id="glow1" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#4f46e5" stop-opacity="0.18"/>
+    <stop offset="100%" stop-color="#0d1f40" stop-opacity="0"/>
+  </radialGradient>
+  <rect width="300" height="300" fill="url(#glow1)"/>
+
+  <!-- Rings -->
+  <circle cx="150" cy="150" r="110" fill="none" stroke="#4f46e5" stroke-width="1.5" stroke-dasharray="8 5" opacity="0.5"/>
+  <circle cx="150" cy="150" r="82"  fill="none" stroke="rgba(139,92,246,0.3)" stroke-width="1.5"/>
+  <circle cx="150" cy="150" r="54"  fill="rgba(79,70,229,0.13)" stroke="#8b5cf6" stroke-width="1.5"/>
+  <circle cx="150" cy="150" r="28"  fill="rgba(209,58,138,0.2)" stroke="#d13a8a" stroke-width="2"/>
+
+  <!-- Cardinal tick marks -->
+  <line x1="150" y1="36"  x2="150" y2="58"  stroke="#4f46e5" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="150" y1="242" x2="150" y2="264" stroke="rgba(79,70,229,0.4)" stroke-width="2" stroke-linecap="round"/>
+  <line x1="36"  y1="150" x2="58"  y2="150" stroke="rgba(79,70,229,0.4)" stroke-width="2" stroke-linecap="round"/>
+  <line x1="242" y1="150" x2="264" y2="150" stroke="rgba(79,70,229,0.4)" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Labels -->
+  <text x="150" y="32"  text-anchor="middle" fill="#8b5cf6" font-size="14" font-family="Arial" font-weight="800">N</text>
+  <text x="150" y="278" text-anchor="middle" fill="rgba(255,255,255,0.28)" font-size="11" font-family="Arial">S</text>
+  <text x="274" y="155" text-anchor="middle" fill="rgba(255,255,255,0.28)" font-size="11" font-family="Arial">E</text>
+  <text x="26"  y="155" text-anchor="middle" fill="rgba(255,255,255,0.28)" font-size="11" font-family="Arial">W</text>
+
+  <!-- Compass needle -->
+  <polygon points="150,78 143,152 150,160 157,152" fill="url(#acc1)"/>
+  <polygon points="150,222 143,152 150,144 157,152" fill="rgba(255,255,255,0.18)"/>
+
+  <!-- Center dot -->
+  <circle cx="150" cy="150" r="9"  fill="#ffffff"/>
+  <circle cx="150" cy="150" r="5"  fill="url(#acc1)"/>
+
+  <!-- Career path dots -->
+  <polyline points="92,208 116,188 150,150" fill="none" stroke="#8b5cf6" stroke-width="1.5" stroke-dasharray="5 3" opacity="0.75"/>
+  <circle cx="92"  cy="208" r="5" fill="#d13a8a" opacity="0.85"/>
+  <circle cx="116" cy="188" r="5" fill="#8b5cf6" opacity="0.85"/>
+</svg>

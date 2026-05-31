@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 540" width="980" height="540">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1628"/>
+      <stop offset="100%" stop-color="#0d2240"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#cd2e3a"/>
+      <stop offset="100%" stop-color="#003478"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="980" height="540" fill="url(#bg)"/>
+
+  <!-- Subtle grid lines -->
+  <line x1="0" y1="135" x2="980" y2="135" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="0" y1="270" x2="980" y2="270" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="0" y1="405" x2="980" y2="405" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="245" y1="0" x2="245" y2="540" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="490" y1="0" x2="490" y2="540" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="735" y1="0" x2="735" y2="540" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+
+  <!-- Left color block -->
+  <rect x="0" y="0" width="6" height="540" fill="url(#accent)"/>
+
+  <!-- Korean flag — top left -->
+  <rect x="48" y="48" width="88" height="58" rx="4" fill="#ffffff" opacity="0.95"/>
+  <!-- Taegeuk red half -->
+  <path d="M92,64 a13,13 0 0,1 0,26 a6.5,6.5 0 0,1 0,-13 a6.5,6.5 0 0,0 0,-13z" fill="#cd2e3a"/>
+  <!-- Taegeuk blue half -->
+  <path d="M92,64 a13,13 0 0,0 0,26 a6.5,6.5 0 0,0 0,-13 a6.5,6.5 0 0,1 0,-13z" fill="#003478"/>
+  <!-- Trigrams -->
+  <rect x="52" y="52" width="12" height="2.5" rx="1" fill="#000" opacity="0.6"/>
+  <rect x="52" y="57" width="5" height="2.5" rx="1" fill="#000" opacity="0.6"/>
+  <rect x="59" y="57" width="5" height="2.5" rx="1" fill="#000" opacity="0.6"/>
+  <rect x="52" y="62" width="12" height="2.5" rx="1" fill="#000" opacity="0.6"/>
+  <rect x="120" y="52" width="12" height="2.5" rx="1" fill="#000" opacity="0.6"/>
+  <rect x="120" y="57" width="12" height="2.5" rx="1" fill="#000" opacity="0.6"/>
+  <rect x="120" y="62" width="12" height="2.5" rx="1" fill="#000" opacity="0.6"/>
+
+  <!-- Category label -->
+  <rect x="48" y="128" width="120" height="26" rx="4" fill="#cd2e3a"/>
+  <text x="108" y="145" text-anchor="middle" fill="#fff" font-size="11" font-family="Arial" font-weight="700" letter-spacing="1.5">KOREA GUIDE</text>
+
+  <!-- Main headline -->
+  <text x="48" y="220" fill="#ffffff" font-size="52" font-family="Georgia, ui-serif, serif" font-weight="800" letter-spacing="-1">Study in</text>
+  <text x="48" y="290" fill="#ffffff" font-size="52" font-family="Georgia, ui-serif, serif" font-weight="800" letter-spacing="-1">South Korea</text>
+  <text x="48" y="340" fill="rgba(255,255,255,0.5)" font-size="22" font-family="Arial" font-weight="400">Complete Guide for Nepali Students · 2026</text>
+
+  <!-- Divider -->
+  <rect x="48" y="366" width="360" height="2" fill="rgba(255,255,255,0.12)"/>
+
+  <!-- Key points -->
+  <circle cx="58" cy="398" r="4" fill="#cd2e3a"/>
+  <text x="74" y="403" fill="rgba(255,255,255,0.78)" font-size="15" font-family="Arial">GKS Scholarship — Full tuition + monthly stipend</text>
+
+  <circle cx="58" cy="426" r="4" fill="#003478"/>
+  <text x="74" y="431" fill="rgba(255,255,255,0.78)" font-size="15" font-family="Arial">Korean Language (TOPIK) classes in Pokhara</text>
+
+  <circle cx="58" cy="454" r="4" fill="rgba(255,255,255,0.4)"/>
+  <text x="74" y="459" fill="rgba(255,255,255,0.78)" font-size="15" font-family="Arial">D-2 Student Visa · Work 20 hrs/week</text>
+
+  <!-- Right panel — large decorative Korean character -->
+  <text x="780" y="340" text-anchor="middle" fill="rgba(255,255,255,0.04)" font-size="340" font-family="Arial" font-weight="900">한</text>
+
+  <!-- Right panel info cards -->
+  <rect x="620" y="60" width="320" height="100" rx="10" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <text x="640" y="95" fill="rgba(255,255,255,0.45)" font-size="11" font-family="Arial" font-weight="700" letter-spacing="1.5">TOP DESTINATION 2026</text>
+  <text x="640" y="122" fill="#ffffff" font-size="28" font-family="Georgia, serif" font-weight="800">South Korea</text>
+  <text x="640" y="145" fill="rgba(255,255,255,0.5)" font-size="13" font-family="Arial">Pokhara Future Minds</text>
+
+  <rect x="620" y="178" width="148" height="80" rx="10" fill="rgba(205,46,58,0.15)" stroke="rgba(205,46,58,0.3)" stroke-width="1"/>
+  <text x="694" y="208" text-anchor="middle" fill="#cd2e3a" font-size="28" font-family="Arial" font-weight="900">GKS</text>
+  <text x="694" y="228" text-anchor="middle" fill="rgba(255,255,255,0.55)" font-size="11" font-family="Arial">Scholarship</text>
+  <text x="694" y="247" text-anchor="middle" fill="rgba(255,255,255,0.45)" font-size="11" font-family="Arial">Fully Funded</text>
+
+  <rect x="780" y="178" width="160" height="80" rx="10" fill="rgba(0,52,120,0.25)" stroke="rgba(0,52,120,0.5)" stroke-width="1"/>
+  <text x="860" y="208" text-anchor="middle" fill="#6ea8fe" font-size="28" font-family="Arial" font-weight="900">TOPIK</text>
+  <text x="860" y="228" text-anchor="middle" fill="rgba(255,255,255,0.55)" font-size="11" font-family="Arial">Korean Language</text>
+  <text x="860" y="247" text-anchor="middle" fill="rgba(255,255,255,0.45)" font-size="11" font-family="Arial">3–4 Months</text>
+
+  <rect x="620" y="274" width="320" height="80" rx="10" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="640" y="305" fill="rgba(255,255,255,0.35)" font-size="11" font-family="Arial" font-weight="700" letter-spacing="1">TUITION RANGE</text>
+  <text x="640" y="332" fill="rgba(255,255,255,0.8)" font-size="18" font-family="Arial" font-weight="700">KRW 4M – 12M / semester</text>
+  <text x="640" y="348" fill="rgba(255,255,255,0.4)" font-size="12" font-family="Arial">Approx. NPR 4–12 lakh · March &amp; September intakes</text>
+
+  <!-- Bottom bar -->
+  <rect x="0" y="496" width="980" height="44" fill="rgba(0,0,0,0.4)"/>
+  <text x="32" y="522" fill="rgba(255,255,255,0.35)" font-size="12" font-family="Arial" letter-spacing="2">POKHARA FUTURE MINDS · pokharafutureminds.com</text>
+  <text x="948" y="522" text-anchor="end" fill="rgba(255,255,255,0.35)" font-size="12" font-family="Arial">2026</text>
+</svg>

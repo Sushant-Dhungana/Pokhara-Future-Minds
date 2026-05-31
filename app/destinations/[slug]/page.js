@@ -17,15 +17,41 @@ export async function generateMetadata({ params }) {
     return buildMetadata({ title: "Destination Not Found", path: `/destinations/${slug}` });
   }
 
-  const isKorea = slug === "korea";
+  const metaMap = {
+    korea: {
+      title: "Study in South Korea from Nepal 2026 — GKS Scholarship, Korean Language & D-2 Visa | Pokhara Future Minds",
+      description: "Complete 2026 guide for Nepali students: how to study in South Korea, apply for the GKS NIIED scholarship, join Korean language (TOPIK) classes in Pokhara, and get your D-2 student visa.",
+    },
+    japan: {
+      title: "Study in Japan from Nepal 2026 — MEXT Scholarship, Student Visa & Top Universities",
+      description: "How Nepali students can study in Japan — MEXT scholarship, JLPT requirements, student visa process, and top universities in Tokyo and Osaka. Expert guidance from Pokhara Future Minds.",
+    },
+    australia: {
+      title: "Study in Australia from Nepal 2026 — Student Visa, GS Statement & University Admissions",
+      description: "Complete guide for Nepali students studying in Australia — IELTS requirements, Genuine Student (GS) statement, subclass 500 visa, and post-study work rights. Expert support from Pokhara Future Minds.",
+    },
+    canada: {
+      title: "Study in Canada from Nepal 2026 — Student Permit, PAL & PGWP Guide",
+      description: "How Nepali students can get a Canadian study permit — PAL requirements, IELTS scores, top colleges, PGWP post-study work pathway. Expert counseling from Pokhara Future Minds Pokhara.",
+    },
+    uk: {
+      title: "Study in the UK from Nepal 2026 — Student Visa, CAS & Graduate Route",
+      description: "How Nepali students can study in the United Kingdom — CAS letter, IELTS 6.0+, Graduate Route visa, and top UK universities. Expert guidance from Pokhara Future Minds.",
+    },
+    usa: {
+      title: "Study in the USA from Nepal 2026 — F-1 Visa, OPT & Top Universities",
+      description: "Complete guide for Nepali students studying in the USA — F-1 visa, I-20, OPT and STEM extension, and top US universities. Expert admissions support from Pokhara Future Minds Pokhara.",
+    },
+  };
+
+  const meta = metaMap[slug] || {
+    title: `Study in ${destination.name} from Nepal — Admissions, Visa & Scholarships`,
+    description: `${destination.intro} Expert admissions and visa guidance from Pokhara Future Minds.`,
+  };
 
   return buildMetadata({
-    title: isKorea
-      ? "Study in South Korea from Nepal 2026 — GKS Scholarship, Korean Language, D-2 Visa"
-      : `Study in ${destination.name} from Nepal — Admissions, Visa & Scholarships`,
-    description: isKorea
-      ? "Complete guide for Nepali students: how to study in South Korea, GKS NIIED scholarship, Korean language TOPIK classes in Pokhara, D-2 visa requirements, and top universities."
-      : `${destination.intro} Pokhara Future Minds provides expert admissions, visa, and scholarship guidance for ${destination.name}.`,
+    title: meta.title,
+    description: meta.description,
     path: `/destinations/${destination.slug}`,
     image: destination.image,
   });
@@ -214,6 +240,41 @@ export default async function DestinationDetailPage({ params }) {
                 ))}
               </div>
             </article>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Internal cross-links to other destinations — helps Google crawl all pages */}
+      <section className="section section--muted" aria-label="Explore other destinations">
+        <div className="container">
+          <Reveal>
+            <div className="section-head">
+              <h2 className="brand-heading-sm">
+                Also explore these <span>destinations</span>
+              </h2>
+              <p>Compare countries and find the best fit for your career goals and budget.</p>
+            </div>
+          </Reveal>
+          <Reveal delay={0.05}>
+            <div className="dest-crosslinks">
+              {destinations
+                .filter((d) => d.slug !== slug)
+                .map((d) => (
+                  <Link
+                    key={d.slug}
+                    href={`/destinations/${d.slug}`}
+                    className="dest-crosslink-item"
+                  >
+                    <span className="dest-crosslink-flag">
+                      {{ korea: "🇰🇷", japan: "🇯🇵", australia: "🇦🇺", canada: "🇨🇦", uk: "🇬🇧", usa: "🇺🇸" }[d.slug]}
+                    </span>
+                    <span>
+                      <strong>{d.name}</strong>
+                      <small>{d.tuitionRange.split("–")[0].trim()}…</small>
+                    </span>
+                  </Link>
+                ))}
+            </div>
           </Reveal>
         </div>
       </section>

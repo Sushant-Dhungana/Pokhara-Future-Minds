@@ -50,6 +50,7 @@ export default function BlogsPage() {
                 width={980}
                 height={540}
                 className="featured-blog-image"
+                unoptimized
                 priority
                 sizes="(max-width: 1024px) 100vw, 58vw"
               />
@@ -95,6 +96,7 @@ export default function BlogsPage() {
                     width={700}
                     height={420}
                     className="blog-card-image"
+                    unoptimized
                     loading="lazy"
                   />
                   <div className="blog-card-body">

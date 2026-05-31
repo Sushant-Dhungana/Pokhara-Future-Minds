@@ -33,6 +33,7 @@ export default function ProcessSteps() {
                     className="process-image"
                     loading="lazy"
                     sizes="(max-width: 768px) 220px, 260px"
+                    unoptimized
                   />
                   <span className="process-overlay-number">
                     {String(step.id).padStart(2, "0")}

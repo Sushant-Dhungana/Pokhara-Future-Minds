@@ -5,6 +5,7 @@ const quickLinks = [
   { href: "/about", label: "About Us" },
   { href: "/services", label: "Services" },
   { href: "/destinations", label: "Destinations" },
+  { href: "/gallery", label: "Gallery" },
   { href: "/blogs", label: "Blog & Guides" },
   { href: "/contact", label: "Contact" },
 ];
@@ -77,15 +78,15 @@ export default function Footer() {
 
             <div className="footer-metrics">
               <article className="footer-metric">
-                <strong>1,000+</strong>
+                <strong>100+</strong>
                 <span>Students Guided</span>
               </article>
               <article className="footer-metric">
-                <strong>700+</strong>
+                <strong>200+</strong>
                 <span>Offers Secured</span>
               </article>
               <article className="footer-metric">
-                <strong>8+</strong>
+                <strong>2+</strong>
                 <span>Years of Expertise</span>
               </article>
             </div>

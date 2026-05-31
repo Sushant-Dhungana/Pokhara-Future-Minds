@@ -8,11 +8,7 @@ const heroBadges = [
   { label: "Study in Korea" },
 ];
 
-const trustItems = [
-  { value: "1,000+", label: "Students Guided" },
-  { value: "700+", label: "Offers Secured" },
-  { value: "8+ Yrs", label: "of Expertise" },
-];
+
 
 export default function HeroSection() {
   return (
@@ -23,7 +19,7 @@ export default function HeroSection() {
         fill
         className="hero-bg"
         priority
-        sizes="100vw"
+        sizes="150vw"
       />
       <div className="hero-overlay" />
 
@@ -67,7 +63,7 @@ export default function HeroSection() {
             </div>
 
             {/* Trust strip */}
-            <div className="hero-trust" aria-label="Key statistics">
+            {/* <div className="hero-trust" aria-label="Key statistics">
               {trustItems.map((item, i) => (
                 <span key={item.label} className="hero-trust-item">
                   {i > 0 && <span className="hero-trust-divider" aria-hidden="true" />}
@@ -75,7 +71,7 @@ export default function HeroSection() {
                   <span>{item.label}</span>
                 </span>
               ))}
-            </div>
+            </div> */}
 
           </Reveal>
         </div>

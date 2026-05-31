@@ -7,7 +7,7 @@ export const blogs = [
     readTime: "8 min read",
     excerpt:
       "A step-by-step guide for Nepali students: Korean language requirements, GKS scholarship, D-2 visa process, and the best universities to target in 2026.",
-    coverImage: "/images/blogs/how-to-choose.jpg",
+    coverImage: "/images/blogs/korea-study-guide.svg",
     intro:
       "South Korea has quietly become one of the best study destinations for Nepali students. Affordable tuition, a government scholarship that covers everything, and a booming job market make it hard to ignore. Here's exactly how to make it happen.",
     content: [
@@ -32,7 +32,7 @@ export const blogs = [
     readTime: "7 min read",
     excerpt:
       "Everything Nepali students need to know about the Global Korea Scholarship (NIIED) — eligibility, required documents, deadlines, and how to write a winning study plan.",
-    coverImage: "/images/blogs/visa-checklist.jpg",
+    coverImage: "/images/blogs/gks-scholarship.svg",
     intro:
       "The Global Korea Scholarship (GKS), administered by NIIED, is one of the most generous scholarships available to Nepali students. It covers 100% of your costs — and thousands of Nepali students are successfully applying every year. Here's how.",
     content: [
@@ -57,7 +57,7 @@ export const blogs = [
     readTime: "6 min read",
     excerpt:
       "Choosing between IELTS and PTE? Here's an honest comparison for Nepali students based on test format, score acceptance, preparation time, and cost.",
-    coverImage: "/images/blogs/early-application.jpg",
+    coverImage: "/images/blogs/ielts-vs-pte.svg",
     intro:
       "Both IELTS and PTE are accepted by universities in Australia, Canada, UK, and most other countries. But they're very different tests — and the right choice depends on your learning style, target country, and preparation timeline.",
     content: [

@@ -8,7 +8,7 @@ export default function AboutSplitSection() {
       <div className="container about-layout">
         <Reveal className="about-media-wrap">
           <Image
-            src="/images/about.jpg"
+            src="/images/aboutus.jpeg"
             alt="Students and families receiving expert counseling at Pokhara Future Minds"
             width={900}
             height={1040}

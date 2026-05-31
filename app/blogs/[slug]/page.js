@@ -86,6 +86,7 @@ export default async function BlogDetailPage({ params }) {
             width={1040}
             height={560}
             className="blog-detail-image"
+          unoptimized
             priority
             sizes="(max-width: 1024px) 100vw, 70vw"
           />

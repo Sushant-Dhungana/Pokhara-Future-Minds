@@ -3,6 +3,7 @@ import Link from "next/link";
 import PageHero from "../../components/common/PageHero";
 import Reveal from "../../components/motion/Reveal";
 import { buildMetadata, siteConfig } from "../../lib/seo";
+import { teamMembers } from "../../data/team";
 
 const trustPoints = [
   {
@@ -54,7 +55,7 @@ export function generateMetadata() {
   return buildMetadata({
     title: "About Pokhara Future Minds | Expert Study Abroad Consultancy Since 2016",
     description:
-      "Learn about Pokhara Future Minds — our student-first counseling approach, 1,000+ students guided, and expert visa guidance for Korea, Australia, Canada, UK, USA & Japan.",
+      "Learn about Pokhara Future Minds — our student-first counseling approach, 100+ students guided, and expert visa guidance for Korea, Australia, Canada, UK, USA & Japan.",
     path: "/about",
   });
 }
@@ -83,14 +84,15 @@ export default function AboutPage() {
         description="We combine strategic profile mapping with ethical guidance — helping students move from confusion to a confident visa grant and a global career."
       />
 
+      {/* ── Who We Are ── */}
       <section className="section">
         <div className="container about-page-grid">
           <Reveal>
             <Image
-              src="/images/about.jpg"
+              src="/images/aboutus.jpeg"
               alt="Expert counseling session at Pokhara Future Minds Educational Consultancy"
               width={920}
-              height={760}
+              height={1060}
               className="about-page-image"
               sizes="(max-width: 1024px) 100vw, 54vw"
             />
@@ -104,7 +106,7 @@ export default function AboutPage() {
               <p>
                 Getting an offer letter is the easy part. Securing a student visa in 2026
                 requires a high-intent strategy — and that&apos;s what we specialize in.
-                We&apos;ve guided over 1,000 students through admissions, documentation,
+                We&apos;ve guided over 100 students through admissions, documentation,
                 and visa processes for Korea, Australia, Canada, UK, USA, and Japan.
               </p>
               <p>
@@ -132,7 +134,71 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="section section--muted" aria-labelledby="trust-heading">
+      {/* ── Message from the Director ── */}
+      <section className="section section--muted" aria-labelledby="director-heading">
+        <div className="container">
+          <Reveal>
+            <div className="section-head">
+              <p className="section-kicker">Leadership</p>
+              <h2 id="director-heading" className="brand-heading-md">
+                Message from the <span>Director</span>
+              </h2>
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.06}>
+            <div className="director-card">
+              {/* Director image — add your photo at /public/images/team/director.jpg */}
+              <div className="director-image-wrap">
+                  <Image
+                    src="/images/sushila.jpeg"
+                    alt="Director — Pokhara Future Minds"
+                    width={340}
+                    height={420}
+                    className="director-photo"
+                  />
+               
+                <div className="director-name-tag">
+                  <strong>Sushila Giri</strong>
+                  <span>Pokhara Future Minds Educational Consultancy</span>
+                </div>
+              </div>
+
+              <blockquote className="director-message">
+                <span className="quote-mark" aria-hidden="true">&ldquo;</span>
+                <p>
+                  When I started Pokhara Future Minds, I had one simple goal — to make quality
+                  international education accessible to every student in Pokhara, regardless of
+                  their background or financial situation. Over the years, I have seen firsthand
+                  how a well-planned study abroad journey can transform a student&apos;s life and
+                  their family&apos;s future.
+                </p>
+                <p>
+                  Our focus on Korea has been a deliberate choice. The GKS scholarship, affordable
+                  tuition, and strong post-study work pathways make Korea one of the highest-ROI
+                  destinations for Nepali students today. We also offer Korean language (TOPIK)
+                  classes, IELTS and PTE coaching right here in Pokhara, so students don&apos;t
+                  have to travel to Kathmandu to prepare.
+                </p>
+                <p>
+                  Every student who walks through our door receives honest, transparent counseling.
+                  We do not promise what we cannot deliver — and that commitment to integrity is
+                  what has built the trust of 100+ students and families across Pokhara and
+                  Gandaki Province.
+                </p>
+                <footer className="director-footer">
+                  <strong>— Director</strong>
+                  <span>Pokhara Future Minds Educational Consultancy</span>
+                  <span>New Road, Ward No. 8, Pokhara, Nepal</span>
+                </footer>
+              </blockquote>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ── Why Trust Us ── */}
+      <section className="section" aria-labelledby="trust-heading">
         <div className="container">
           <Reveal>
             <div className="section-head">
@@ -160,7 +226,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="section" aria-labelledby="roadmap-heading">
+      {/* ── 4-Stage Roadmap ── */}
+      <section className="section section--muted" aria-labelledby="roadmap-heading">
         <div className="container">
           <Reveal>
             <div className="section-head">
@@ -168,7 +235,7 @@ export default function AboutPage() {
                 Our 4-stage roadmap to <span>visa success</span>
               </h2>
               <p>
-                Navigating strict 2026 Genuine Student (GS) and PAL requirements
+                Navigating strict 2026 Genuine Student (GS) requirements
                 with precision documentation and proven interview strategies.
               </p>
             </div>
@@ -187,6 +254,53 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      {/* ── Our Team ── */}
+      <section className="section" aria-labelledby="team-heading">
+        <div className="container">
+          <Reveal>
+            <div className="section-head">
+              <p className="section-kicker">The People Behind It</p>
+              <h2 id="team-heading" className="brand-heading-md">
+                Meet our <span>team</span>
+              </h2>
+              <p>
+                A dedicated group of counselors, visa specialists, and language
+                coaches committed to your study abroad success.
+              </p>
+            </div>
+          </Reveal>
+
+          <div className="team-grid">
+            {teamMembers.map((member, index) => (
+              <Reveal key={member.id} delay={index * 0.06}>
+                <article className="team-card">
+                  <div className="team-photo-wrap">
+                    {member.image ? (
+                      <Image
+                        src={member.image}
+                        alt={member.name}
+                        width={200}
+                        height={200}
+                        className="team-photo"
+                        loading="lazy"
+                      />
+                    ) : (
+                      <div className="team-photo-placeholder">
+                        <span>{member.initials}</span>
+                      </div>
+                    )}
+                  </div>
+                  <h3>{member.name}</h3>
+                  <p className="team-role">{member.role}</p>
+                  <p className="team-bio">{member.bio}</p>
+                </article>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
     </>
   );
 }
